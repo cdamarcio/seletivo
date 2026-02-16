@@ -1,32 +1,85 @@
-<<<<<<< HEAD
-<section class="grid-editais" id="lista-editais">
-    <div class="card">
-        <div class="badge aberto">Inscrições Abertas</div>
-        <h3>PSS 001/2026 - Engenheiro Civil</h3>
-        <p><strong>Vagas:</strong> 05 + Cadastro Reserva</p>
-        <p><strong>Remuneração:</strong> R$ 6.500,00</p>
-        
-        <div class="card-footer">
-            <div class="date-info">
-                Até 25/02/2026
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MazzPSS | Portal de Processos Seletivos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2942/2942789.png">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <h1 class="logo">Mazz<span>PSS</span></h1>
+            <div class="nav-links">
+                <a href="index.html" style="text-decoration: none; color: var(--text-main); margin-right: 20px; font-weight: 600;">Início</a>
+                <a href="admin.html" class="btn-admin">Painel Administrativo</a>
             </div>
-            <button class="btn-primary">Acessar Edital</button>
         </div>
-    </div>
-=======
-<section class="grid-editais" id="lista-editais">
-    <div class="card">
-        <div class="badge aberto">Inscrições Abertas</div>
-        <h3>PSS 001/2026 - Engenheiro Civil</h3>
-        <p><strong>Vagas:</strong> 05 + Cadastro Reserva</p>
-        <p><strong>Remuneração:</strong> R$ 6.500,00</p>
-        
-        <div class="card-footer">
-            <div class="date-info">
-                Até 25/02/2026
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h2>Processos Seletivos Simplificados</h2>
+            <p>Acesse editais, acompanhe cronogramas e realize sua inscrição de forma rápida.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filters">
+            <input type="text" id="search" placeholder="Buscar por cargo ou número do edital...">
+            <select id="status">
+                <option value="todos">Todos os Status</option>
+                <option value="aberto">Inscrições Abertas</option>
+                <option value="analise">Em Análise</option>
+                <option value="encerrado">Encerrados</option>
+            </select>
+        </section>
+
+        <section class="grid-editais" id="lista-editais">
+            
+            <div class="card">
+                <div class="badge aberto">Inscrições Abertas</div>
+                <h3>PSS 001/2026 - Engenheiro Civil</h3>
+                <p><strong>Vagas:</strong> 05 + Cadastro Reserva</p>
+                <p><strong>Remuneração:</strong> R$ 6.500,00</p>
+                <div class="card-footer">
+                    <div class="date-info">Encerrra em: 25/02/2026</div>
+                    <button class="btn-primary" onclick="alert('Funcionalidade de inscrição em breve!')">Acessar Edital</button>
+                </div>
             </div>
-            <button class="btn-primary">Acessar Edital</button>
-        </div>
-    </div>
->>>>>>> 2ed3c30f8f9c745a66f9702902adfc6167357082
-</section>
+
+            <div class="card">
+                <div class="badge aberto">Inscrições Abertas</div>
+                <h3>PSS 002/2026 - Analista de Sistemas</h3>
+                <p><strong>Vagas:</strong> 02 + CR</p>
+                <p><strong>Remuneração:</strong> R$ 5.200,00</p>
+                <div class="card-footer">
+                    <div class="date-info">Encerra em: 01/03/2026</div>
+                    <button class="btn-primary">Acessar Edital</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="badge encerrado" style="background: #fee2e2; color: #991b1b;">Encerrado</div>
+                <h3>PSS 005/2025 - Auxiliar Administrativo</h3>
+                <p><strong>Vagas:</strong> 10</p>
+                <p><strong>Remuneração:</strong> R$ 2.100,00</p>
+                <div class="card-footer">
+                    <div class="date-info">Finalizado em: 15/12/2025</div>
+                    <button class="btn-primary" style="opacity: 0.6; cursor: not-allowed;">Ver Resultados</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 0.9rem;">
+        <p>&copy; 2026 MazzPSS - Sistema de Gestão de Seletivos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
