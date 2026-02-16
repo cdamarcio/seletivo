@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - PSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+    <div class="sidebar">
+        <div class="logo-admin">MazzAdmin</div>
+        <nav>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Cadastrar Edital</a>
+            <a href="#">Gerenciar Inscritos</a>
+            <a href="index.html">Sair</a>
+        </nav>
+    </div>
+
+    <main class="admin-content">
+        <header class="admin-header">
+            <h2>Painel de Controle</h2>
+            <div class="user-info">Admin: Márcio Oliveira</div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h4>Inscrições Hoje</h4>
+                <p class="number">124</p>
+            </div>
+            <div class="stat-card">
+                <h4>Editais Ativos</h4>
+                <p class="number">08</p>
+            </div>
+            <div class="stat-card">
+                <h4>Aguardando Análise</h4>
+                <p class="number">45</p>
+            </div>
+        </div>
+
+        <section class="data-table">
+            <h3>Últimas Inscrições</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Candidato</th>
+                        <th>Cargo</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Felipe Oliveira</td>
+                        <td>Engenheiro Civil</td>
+                        <td>16/02/2026</td>
+                        <td><span class="tag p-pendente">Pendente</span></td>
+                        <td><button class="btn-sm">Analisar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
