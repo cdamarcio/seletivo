@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MazzPSS | Portal de Seletivos - Conceição do Araguaia</title>
+    <title>Detalhes do Edital | MazzPSS</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,41 +13,75 @@
             --white: #ffffff;
             --text-main: #1e293b;
             --text-muted: #64748b;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --neutral: #94a3b8;
+            --border: #e2e8f0;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
         body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; }
 
-        /* Navbar */
-        .navbar { background: var(--white); padding: 1.2rem 0; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .navbar { background: var(--white); padding: 1.2rem 0; border-bottom: 1px solid var(--border); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
         .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo { font-size: 1.2rem; font-weight: 700; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--accent); }
-        .btn-admin { background: #f1f5f9; color: var(--primary); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: 0.3s; }
-        .btn-admin:hover { background: var(--primary); color: white; }
 
-        /* Hero */
-        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 60px 0; text-align: center; border-radius: 0 0 40px 40px; }
-        .hero h2 { font-size: 2.2rem; margin-bottom: 8px; }
-
-        /* Filtros */
-        .filters { background: var(--white); padding: 25px; border-radius: 20px; display: flex; gap: 15px; margin-top: -35px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08); position: relative; z-index: 10; }
-        .filters input { flex: 2; padding: 14px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; }
-        .filters select { flex: 1; padding: 14px; border: 1px solid #e2e8f0; border-radius: 12px; background: white; cursor: pointer; }
-
-        /* Grid */
-        .grid-editais { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; margin: 60px 0; }
+        .edital-container { margin: 40px 0; display: grid; grid-template-columns: 1fr 320px; gap: 30px; }
         
-        .card { background: var(--white); border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03); border-top: 5px solid var(--accent); transition: transform 0.3s; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
-        
-        .badge { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase; }
-        .badge.aberto { background: #dcfce7; color: #15803d; }
-        .badge.analise { background: #fef3c7; color: #92400e; }
-        .badge.encerrado { background: #f1f5f9; color: #475569; }
+        .card-detalhes { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .badge-aberto { background: #dcfce7; color: #15803d; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
 
-        .card h3 {
+        h1 { margin: 15px 0; font-size: 2rem; color: var(--primary); }
+        .info-row { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid var(--border); }
+        .info-label { font-weight: 600; color: var(--text-muted); }
+
+        .sidebar { background: var(--white); padding: 25px; border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position: sticky; top: 20px; }
+        .btn-apply { width: 100%; padding: 15px; background: var(--accent); color: white; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; margin-bottom: 15px; text-decoration: none; display: block; text-align: center; }
+        .btn-pdf { width: 100%; padding: 12px; background: #f1f5f9; color: var(--primary); border: none; border-radius: 10px; font-weight: 600; cursor: pointer; text-decoration: none; display: block; text-align: center; }
+
+        @media (max-width: 768px) { .edital-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Mazz<span>PSS</span></a>
+            <a href="index.html" style="text-decoration: none; font-weight: 600; color: var(--text-muted);">← Voltar</a>
+        </div>
+    </nav>
+
+    <main class="container edital-container">
+        <div class="card-detalhes">
+            <span class="badge-aberto">Inscrições Abertas</span>
+            <h1>PSS 001/2026 - Engenheiro Civil</h1>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Processo Seletivo Simplificado para contratação imediata e cadastro reserva.</p>
+
+            <div class="info-row"><span class="info-label">Vagas</span><span>05 + Cadastro Reserva</span></div>
+            <div class="info-row"><span class="info-label">Salário</span><span>R$ 6.500,00</span></div>
+            <div class="info-row"><span class="info-label">Escolaridade</span><span>Superior Completo</span></div>
+            <div class="info-row"><span class="info-label">Cidade</span><span>Conceição do Araguaia - PA</span></div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">Documentação Requerida</h3>
+            <ul style="margin-left: 20px; color: var(--text-muted);">
+                <li>RG e CPF (frente e verso)</li>
+                <li>Diploma de Graduação e Registro no Conselho (CREA)</li>
+                <li>Certificados de cursos de especialização (se houver)</li>
+                <li>Comprovante de experiência profissional (Carteira de Trabalho ou Contratos)</li>
+            </ul>
+        </div>
+
+        <aside class="sidebar">
+            <h2>MazzAdmin</h2>
+            <a href="admin.html" class="active"><span>Dashboard</span></a>
+            <a href="edital.html"><span>Ver Editais</span></a> 
+            <a href="novo-edital.html"><span>Cadastrar Novo</span></a>
+            <a href="index.html" style="margin-top: auto; color: #f87171;"><span>Sair</span></a>
+        </aside>
+    </main>
+
+    <footer style="text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 0.8rem;">
+        &copy; 2026 MazzPSS | Portal de Seletivos.
+    </footer>
+
+</body>
+</html>
