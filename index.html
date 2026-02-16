@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MazzPSS | Portal de Seletivos - Conceição do Araguaia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"><title>MazzPSS | Portal</title>
     <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --bg: #f8fafc;
-            --white: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --neutral: #94a3b8;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; }
-
-        /* Header & Nav */
-        .navbar { background: var(--white); padding: 1.2rem 0; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--accent); }
-        .btn-admin { background: #f1f5f9; color: var(--primary); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: 0.3s; }
-        .btn-admin:hover { background: var(--primary); color: white; }
-
-        /* Hero */
-        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 60px 0; text-align: center; border-radius: 0 0 40px 40px; }
-        .hero h2 { font-size: 2.2rem; margin-bottom: 8px; }
-
-        /* Filtros */
-        .filters { background: var(--white); padding: 25px; border-radius: 20px; display: flex; gap: 15px; margin-top: -35px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08); position: relative; z-index: 10; }
-        .filters input { flex: 2; padding: 14px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1
+        body { font-family: sans-serif; background: #f8fafc; margin: 0; color: #1e293b; }
+        .navbar { background: #0f172a; color: white; padding: 20px; display: flex; justify-content: space-between; }
+        .hero { background: #2563eb; color: white; padding: 40px; text-align: center; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 20px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; border-top: 5px solid #2563eb; }
+        .btn { background: #2563eb; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="navbar"><strong>MazzPSS</strong> <a href="admin.html" style="color:white">Painel Admin</a></div>
+    <div class="hero"><h1>Seletivos Conceição do Araguaia</h1></div>
+    <div class="container">
+        <div class="card">
+            <h3>PSS 001/2026 - Engenheiro Civil</h3>
+            <p>Vagas: 05 | Salário: R$ 6.500,00</p>
+            <a href="edital.html" class="btn">Ver Edital</a>
+        </div>
+    </div>
+</body>
+</html>
